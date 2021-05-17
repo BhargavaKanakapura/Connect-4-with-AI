@@ -13,7 +13,6 @@ class Computer:
         self.yellow = constants.YELLOW
 
         self.HelperMethods = self.HelperMethods()
-        self.DoubleAttackPatterns = self.DoubleAttackPatterns()
         
     def format_board(self, board, mode):
         
@@ -87,28 +86,7 @@ class Computer:
                 window = [board[r+3-i][c+i] for i in range(4)]
                 score += self.score_window(window)
 
-        score += ( self.DoubleAttackPatterns.seven(board, self.ai_piece) - 
-                   self.DoubleAttackPatterns.seven(board, self.player_piece) ) * 50
-        score += ( self.DoubleAttackPatterns.double_cross(board, self.ai_piece) -
-                   self.DoubleAttackPatterns.double_cross(board, self.player_piece) ) * 50
-        score += ( self.DoubleAttackPatterns.corner(board, self.ai_piece) - 
-                   self.DoubleAttackPatterns.corner(board, self.player_piece) )
-
         return score
-
-    class DoubleAttackPatterns:
-        
-        def __init__(self):
-            pass
-
-        def seven(self, board, piece):
-            return 0
-
-        def double_cross(self, board, piece):
-            return 0
-
-        def corner(self, board, piece):
-            return 0
 
     class HelperMethods:
 
