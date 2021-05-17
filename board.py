@@ -51,6 +51,8 @@ class Board:
 
             self.board[row][col] = peice
             self.squares_left -= 1
+            
+            self.move_log.append(self.board)
 
             return True
 
@@ -147,7 +149,7 @@ class Board:
         pygame.display.update()
         
     def undo(self):
-        self.board = self.board[-2]
+        self.board = self.move_log[-2]
             
     def __repr__(self):
         return self.board
