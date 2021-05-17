@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "repl_pygame_Connect-4-with-AI"
-version = "0.1.0"
-description = ""
+version = "1.0.0"
+description = "A two player board game"
 authors = ["Bhargava Kanakapura bhargavakanakapura@sfhs.com"]
 
 [tool.poetry.dependencies]
