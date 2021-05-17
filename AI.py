@@ -14,38 +14,6 @@ class Computer:
 
         self.HelperMethods = self.HelperMethods()
         
-    def format_board(self, board, mode):
-        
-        if mode == 1:
-            
-            formatted_board = numpy.zeros((constants.ROWS, constants.COLS))
-            
-            for row in range(constants.ROWS):
-                for col in range(constants.COLS):
-                    
-                    if board[row][col] == self.RED:
-                        formatted_board[row][col] = self.player_piece
-                        
-                    elif board[row][col] == self.YELLOW:
-                        formatted_board[row][col] = self.ai_piece
-                        
-            return numpy.flip(formatted_board, 0)
-        
-        elif mode == 2:
-            
-            formatted_board = numpy.zeros((constants.ROWS, constants.COLS))
-            
-            for row in range(constants.ROWS):
-                for col in range(constants.COLS):
-                    
-                    if board[row][col] == self.ai_piece:
-                        formatted_board[row][col] = self.yellow
-                        
-                    elif board[row][col] == self.player_piece:
-                        formatted_board[row][col] = self.red
-                        
-            return formatted_board
-        
     def score_window(self, window, two_score=2, three_score=5, four_score=100):
         
         def _contains(piece, number, score):
