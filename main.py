@@ -19,22 +19,7 @@ DISPLAY = pygame.display.set_mode(( constants.WIDTH, constants.HEIGHT ))
 CLOCK = pygame.time
 
 def init():
-    
-    username = input("USERNAME: ")
-    password = input("PASSWORD: ")
-    
-    if UserInterface.valid_pass(username, password):
-        
-        constants.MODE = input("PVP or PVC: ")
-        if constants.MODE not in ["PVC", "PVP"]:
-            raise UserInterface.InvalidInput()
-        
-        if constants.MODE == "PVC":
-            constants.LEVEL = 5
-            print("{} vs Computer".format(username))
-
-    else:
-        raise UserInterface.InvalidLogin()
+    pass
 
 def main():
     
